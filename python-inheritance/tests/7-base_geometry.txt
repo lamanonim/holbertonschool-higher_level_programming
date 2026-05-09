@@ -22,3 +22,23 @@ age must be greater than 0
 ... except ValueError as e:
 ...     print(e)
 distance must be greater than 0
+>>> try:
+...     bg.integer_validator("age", True)
+... except TypeError as e:
+...     print(e)
+age must be an integer
+>>> try:
+...     bg.integer_validator("age", [1, 2])
+... except TypeError as e:
+...     print(e)
+age must be an integer
+>>> try:
+...     bg.integer_validator("age", (1, 2))
+... except TypeError as e:
+...     print(e)
+age must be an integer
+>>> try:
+...     bg.integer_validator("age", {1, 2})
+... except TypeError as e:
+...     print(e)
+age must be an integer
