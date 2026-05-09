@@ -42,3 +42,8 @@ age must be an integer
 ... except TypeError as e:
 ...     print(e)
 age must be an integer
+>>> try:
+...     bg.integer_validator("age")
+... except TypeError as e:
+...     print(e)
+integer_validator() missing 1 required positional argument: 'value'
